@@ -1,0 +1,201 @@
+/* ===== GLOBAL ===== */
+* {
+  box-sizing: border-box;
+  font-family: "Cairo", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  min-height: 100%;
+}
+
+body {
+  direction: rtl;
+  background: linear-gradient(to bottom, #000000 0%, #1a1a1a 30%, #eaeaea 100%);
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+header {
+  text-align: center;
+  padding: 80px 20px 40px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 38px;
+  font-weight: 700;
+}
+
+header p {
+  margin-top: 10px;
+  opacity: 0.85;
+  font-size: 16px;
+}
+
+/* ===== NAV ===== */
+nav {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+nav a {
+  color: #00ffd5;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+nav a:hover {
+  opacity: 0.7;
+}
+
+/* ===== MAIN CONTENT ===== */
+main {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 40px;
+  border-radius: 22px;
+  background: #ffffff;
+  color: #000000;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.25);
+}
+
+/* ===== ABOUT ME ===== */
+.about-me {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.about-me h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.about-me p {
+  font-size: 16px;
+  opacity: 0.85;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ===== ARTICLES GRID ===== */
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+  margin-bottom: 30px;
+}
+
+/* ===== ARTICLE CARD ===== */
+.article-card {
+  width: 100%;
+  aspect-ratio: 16/9; /* 1920x1080 */
+  border-radius: 16px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.article-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.article-card a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.article-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  display: block;
+}
+
+.article-card h3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+  font-size: 20px;
+  color: #ffffff;
+  background: rgba(0,0,0,0.5);
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* ===== HERO IMAGE ===== */
+.hero img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 16px;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+/* ===== SOCIAL LINKS ===== */
+.social-links {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.social-buttons a {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.social-buttons a:hover {
+  transform: scale(1.1);
+  opacity: 0.85;
+}
+
+.social-buttons .facebook { background: #3b5998; }
+.social-buttons .youtube { background: #ff0000; }
+.social-buttons .instagram { background: #e1306c; }
+/* إضافة تيك توك */
+.social-buttons .tiktok { background: #010101; color: #fff; }
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  color: #cccccc;
+  font-size: 14px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  main { padding: 30px; margin: 40px auto; }
+  header h1 { font-size: 32px; }
+  header p { font-size: 14px; }
+}
+
+@media (max-width: 480px) {
+  main { padding: 20px; margin: 20px auto; }
+  header h1 { font-size: 26px; }
+  header p { font-size: 12px; }
+  .article-card h3 { font-size: 16px; padding: 10px; }
+}
